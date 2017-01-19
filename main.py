@@ -4,7 +4,6 @@ K = []
 E = []
 F = []
 
-QTP = []
 
 
 quintupla.estados(K)
