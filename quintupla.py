@@ -246,12 +246,13 @@ def main():
             x = input("\n\n\t >> Ingresar palabra: ")
             if (x == 'mostrar'):
                 imprimirAFD(afd)
+                continue
             if (x == 'nuevo'):
                 main()
             if (x == 'salir'):
-                print("\nFINALIZANDO PROGRAMA\n")
+                print("\n\nFINALIZANDO PROGRAMA\n")
                 sys.exit(0)
-            if validar_palabra(E,x) or len(x)==0:
+            elif validar_palabra(E,x) or len(x)==0:
                 EP = AFD(K,E,S,F,Q,x)
                 print ("\n\t\t\tEstado en que termina la maquina: "+EP)
                 if (pertenece(EP,F)):
@@ -259,5 +260,5 @@ def main():
                 else:
                     print ("\t\t\t* Palabra no reconocida por la maquina")
             else:
-                print("\n\t\t\t* Palabra no reconocida por el lenguaje.")
+                print("\n\t\t\t* Lenguaje erroneo")
                 continue
