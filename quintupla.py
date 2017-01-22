@@ -178,7 +178,7 @@ def inicializarAFD():
 
 # FUNCION IMPRIMIRCONJUNTO
 def imprimir_conjunto(C):
-    print("\n\t\t>>   {  ",end ="")
+    print("\n\t\t\t>>   {  ",end ="")
     for i in range(len(C)):
         print(C[i]+"  ",end="")
     print("}",end="")
@@ -203,21 +203,21 @@ def imprimirAFD(afd):
     print("\n\n\t\tCONJUNTO DE ESTADOS FINALES:")
     imprimir_conjunto(F)
     print("\n\n\t\tTABLA DE TRANSICIONES:")
-    print("\n\t\t|Estado\t|   ", end = "")
+    print("\n\t\t\t|Estado\t|   ", end = "")
     for indice in range(len(E)):
         print(E[indice]+"\t|   ", end = "")
     print("")
     for i in range(len(Q)):
-        print("\n\t\t| '"+K[i]+"' \t|   ", end = "")
+        print("\n\t\t\t| '"+K[i]+"' \t|   ", end = "")
         for j in range(len(E)):
             print (Q[i][j]+"\t|   ", end = "")
         print("")
 
-    print("\n\t+-----------------------------------------------+")
-    print("\t| Digite 'mostrar' para desplegar AFD ingresado |")
-    print("\t| Digite 'nuevo' para ingresar nuevo AFD        |")
-    print("\t| Digite 'salir' para terminar programa         |")
-    print("\t+-----------------------------------------------+")
+    print("\n\t\t+-----------------------------------------------+")
+    print("\t\t| Digite 'mostrar' para desplegar AFD ingresado |")
+    print("\t\t| Digite 'nuevo' para ingresar nuevo AFD        |")
+    print("\t\t| Digite 'salir' para terminar programa         |")
+    print("\t\t+-----------------------------------------------+")
 
 
 # FUNCION LEER PALABRA
@@ -251,6 +251,7 @@ def main():
                 main()
             if (x == 'salir'):
                 print("\n\nFINALIZANDO PROGRAMA\n")
+                fin=input("PULSE ENTER PARA SALIR...")
                 sys.exit(0)
             elif validar_palabra(E,x) or len(x)==0:
                 EP = AFD(K,E,S,F,Q,x)
