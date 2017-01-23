@@ -33,7 +33,7 @@ def estados(K):
     print("\t+-------------------------------------------------------+\n")
     while (True):
         x = input("   -> Ingrese estado: ")
-        if (x=="ok" or x=="OK"):
+        if (x=="ok" or x=="OK") and (len(K)>0):
             break
         if(validar(K,x)==True):
             continue
