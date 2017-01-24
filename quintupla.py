@@ -199,7 +199,7 @@ def imprimirAFD(afd):
     print ("\n\n\t\tALFABETO: ")
     imprimir_conjunto(E)
     print("\n\n\t\tESTADO INICIAL:")
-    imprimir_conjunto(S)
+    print("\n\t\t\t>>   {  "+S+"  }", end = "")
     print("\n\n\t\tCONJUNTO DE ESTADOS FINALES:")
     imprimir_conjunto(F)
     print("\n\n\t\tTABLA DE TRANSICIONES:")
